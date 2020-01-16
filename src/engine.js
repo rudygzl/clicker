@@ -14,7 +14,15 @@ btnClicker.addEventListener("keydown", event => {
 
 function addScore() {
     score = score + count;
-    display.innerHTML = `<span>${score}</span>`;
+    if (score > 1000) {
+        display.innerHTML = `<span>${score / 1000}k</span>`;
+    } else if (score > 1000000) {
+        display.innerHTML = `<span>${score / 1000000}M</span>`;
+    } else if (score > 1000000000) {
+        display.innerHTML = `<span>${score / 1000000000}B</span>`;
+    } else {
+        display.innerHTML = `<span>${score}</span>`;
+    }
     if (score >= 200) {
         autoClicker.disabled = false;
     } else {
