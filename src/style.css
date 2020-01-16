@@ -18,9 +18,18 @@ body {
     touch-action: manipulation;
 }
 
+.btn:hover {
+    touch-action: manipulation;
+}
+
 .btn:active {
     @apply border-b-2;
     line-height: 49px;
+    touch-action: manipulation;
+}
+
+.btn:disabled {
+    touch-action: manipulation;
 }
 
 .btn-red {
