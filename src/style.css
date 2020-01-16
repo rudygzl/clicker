@@ -8,29 +8,17 @@
 html,
 body {
     overflow: hidden;
-    touch-action: manipulation;
 }
 
 .btn {
     @apply text-white font-bold px-4 border-b-4 rounded;
     height: 45px;
     line-height: 45px;
-    /* remove double tap zoom on mobile devices when clicking buttons*/
-    touch-action: manipulation;
-}
-
-.btn:hover {
-    touch-action: manipulation;
 }
 
 .btn:active {
     @apply border-b-2;
     line-height: 49px;
-    touch-action: manipulation;
-}
-
-.btn:disabled {
-    touch-action: manipulation;
 }
 
 .btn-red {
