@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-blue-700 h-full">
+    <div class="flex content-center justify-center h-full items-center">
+        <div class="bg-white shadow-2xl rounded-full px-10 py-5 max-w-lg">
+            <div class="flex justify-center mt-5"><button id="btnClicker" class="btn btn-red noselect focus:outline-none">Clicker</button></div>
+            <div class="flex justify-center mt-5"><button id="multiplier" class="btn btn-blue noselect focus:outline-none" disabled><span>Multiplicateur x 2 (Prix = 50)</span></button></div>
+            <div class="flex justify-center mt-5"><button id="autoClicker" class="btn btn-green noselect focus:outline-none" disabled><span>Autoclicker (200)</span></button></div>
+            <div class="flex justify-center mt-5">
+                <div id="display" class="font-semibold text-orange-500 text-shadow noselect text-5xl"><span>0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="../src/engine.js">
+    </script>
+</body>
+
+</html>
