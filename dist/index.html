@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full">
+<!-- prettier-ignore -->
+<html lang="fr" class="h-full max-w-full">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-blue-700 h-full">
+<body class="bg-blue-700 h-full max-w-full">
     <div class="flex content-center justify-center h-full items-center">
-        <div class="bg-white shadow-2xl rounded-full px-10 py-5 max-w-lg">
-            <div class="flex justify-center mt-5"><button id="btnClicker" class="btn btn-red noselect focus:outline-none">Clicker</button></div>
-            <div class="flex justify-center mt-5"><button id="multiplier" class="btn btn-blue noselect focus:outline-none" disabled><span>Multiplicateur x 2 (Prix = 50)</span></button></div>
-            <div class="flex justify-center mt-5"><button id="autoClicker" class="btn btn-green noselect focus:outline-none" disabled><span>Autoclicker (200)</span></button></div>
+        <div class="bg-white shadow-2xl rounded-full px-12 py-5 max-w-lg">
             <div class="flex justify-center mt-5">
-                <div id="display" class="font-semibold text-orange-500 text-shadow noselect text-5xl"><span>0</span></div>
+                <button id="btnClicker" class="btn btn-red noselect focus:outline-none shadow-lg">
+                    Clicker
+                </button>
+            </div>
+            <div class="flex justify-center mt-5">
+                <button id="multiplier" class="btn btn-blue noselect focus:outline-none shadow-lg" disabled>
+                    <span>Multiplier x 2 (Price = 50)</span>
+                </button>
+            </div>
+            <div class="flex justify-center mt-5">
+                <button id="autoClicker" class="btn btn-green noselect focus:outline-none shadow-lg" disabled>
+                    <span>Autoclicker (200)</span>
+                </button>
+            </div>
+            <div class="flex justify-center mt-5">
+                <div id="display" class="font-semibold text-orange-500 text-shadow noselect text-5xl">
+                    <span>0</span>
+                </div>
             </div>
         </div>
     </div>
-    <script src="../src/engine.js">
-    </script>
+    <script src="../src/engine.js"></script>
+    <script src="../src/bgAnimate.js"></script>
 </body>
 
 </html>

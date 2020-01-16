@@ -30,12 +30,12 @@ function addScore() {
 
 function increment() {
     if (score >= multiplierPrice) {
-        multiplier.innerHTML = `<span>Multiplicateur x ${count + 1} (Prix = ${multiplierPrice})</span>`;
+        multiplier.innerHTML = `<span>Multiplier x ${count + 1} (Price = ${multiplierPrice})</span>`;
         count++;
         score = score - multiplierPrice;
         display.innerHTML = `<span>${score}</span>`;
         multiplierPrice = multiplierPrice * 2;
-        multiplier.innerHTML = `<span>Multiplicateur x ${count + 1} (Prix = ${multiplierPrice})</span>`;
+        multiplier.innerHTML = `<span>Multiplier x ${count + 1} (Price = ${multiplierPrice})</span>`;
         multiplier.disabled = true;
     }
 }
