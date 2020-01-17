@@ -11413,6 +11413,18 @@ video {
   }
 }
 
+@keyframes moveplus {
+  0% {
+    margin-top: 1px;
+    opacity: 100%;
+  }
+
+  100% {
+    margin-top: -150px;
+    opacity: 50%;
+  }
+}
+
 html,
 body {
   overflow: hidden;
