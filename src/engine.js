@@ -21,51 +21,14 @@ btnClicker.addEventListener("keydown", event => {
 
 function addScore() {
     score = score + count;
-    let random = Math.floor(Math.random() * 5);
-    if (random === 0) {
-
-        plus1.innerHTML = `+${count}`;
-        plus1.classList.remove("hidden");
-        setTimeout(() => {
-            plus1.classList.add("hidden");
-        }, 400);
-    }
-    if (random === 1) {
-        plus2.innerHTML = `+${count}`;
-        plus2.classList.remove("hidden");
-        setTimeout(() => {
-            plus2.classList.add("hidden");
-        }, 400);
-    }
-    if (random === 2) {
-        plus3.innerHTML = `+${count}`;
-        plus3.classList.remove("hidden");
-        setTimeout(() => {
-            plus3.classList.add("hidden");
-        }, 400);
-    }
-
-    if (random === 3) {
-        plus4.innerHTML = `+${count}`;
-        plus4.classList.remove("hidden");
-        setTimeout(() => {
-            plus4.classList.add("hidden");
-        }, 400);
-    }
-
-    if (random === 4) {
-        plus5.innerHTML = `+${count}`;
-        plus5.classList.remove("hidden");
-        setTimeout(() => {
-            plus5.classList.add("hidden");
-        }, 400);
-    }
     if (score > 1000) {
         display.innerHTML = `<span>${score / 1000}k</span>`;
+    } else if (score > 10000) {
+        display.innerHTML = `<span>${Math.floor(score / 10000)}M</span>`;
     } else if (score > 1000000) {
-        display.innerHTML = `<span>${score / 1000000}M</span>`;
+        display.innerHTML = `<span>${Math.floor(score / 1000000)}M</span>`;
     } else if (score > 1000000000) {
-        display.innerHTML = `<span>${score / 1000000000}B</span>`;
+        display.innerHTML = `<span>${Math.floor(score / 1000000000)}B</span>`;
     } else {
         display.innerHTML = `<span>${score}</span>`;
     }
@@ -97,25 +60,16 @@ function increment() {
     }
 }
 
-function stopParticles() {
-    plus1.classList.add("hidden");
-    plus2.classList.add("hidden");
-    plus3.classList.add("hidden");
-    plus4.classList.add("hidden");
-    plus5.classList.add("hidden");
-}
-
 function autoClickerBonus() {
     if (score >= autoclickerPrice) {
         autoclickerCount++;
-        score = score - autoclickerPrice;
+        score = score - Math.floor(autoclickerPrice);
         setInterval(() => {
             btnClicker.click();
-            stopParticles();
         }, 1000);
         display.innerHTML = `<span>${score}</span>`;
         autoclickerPrice = autoclickerPrice * 1.5;
-        autoClicker.innerHTML = `<span>Autoclicker x ${autoclickerCount} (Price = ${autoclickerPrice})</span>`;
+        autoClicker.innerHTML = `<span>Autoclicker x ${autoclickerCount} (Price = ${Math.floor(autoclickerPrice)})</span>`;
         autoClicker.disabled = true;
         if (score < multiplierPrice) {
             multiplier.disabled = true;
@@ -123,12 +77,49 @@ function autoClickerBonus() {
     }
 }
 
+btnClicker.addEventListener("mousedown", function () {
+    let random = Math.floor(Math.random() * 5);
+    if (random === 0) {
+        plus1.innerHTML = `+${count}`;
+        plus1.classList.remove("hidden");
+        setTimeout(() => {
+            plus1.classList.add("hidden");
+        }, 600);
+    }
+    if (random === 1) {
+        plus2.innerHTML = `+${count}`;
+        plus2.classList.remove("hidden");
+        setTimeout(() => {
+            plus2.classList.add("hidden");
+        }, 600);
+    }
+    if (random === 2) {
+        plus3.innerHTML = `+${count}`;
+        plus3.classList.remove("hidden");
+        setTimeout(() => {
+            plus3.classList.add("hidden");
+        }, 600);
+    }
+
+    if (random === 3) {
+        plus4.innerHTML = `+${count}`;
+        plus4.classList.remove("hidden");
+        setTimeout(() => {
+            plus4.classList.add("hidden");
+        }, 600);
+    }
+
+    if (random === 4) {
+        plus5.innerHTML = `+${count}`;
+        plus5.classList.remove("hidden");
+        setTimeout(() => {
+            plus5.classList.add("hidden");
+        }, 600);
+    }
+});
+
+
 btnClicker.onclick = addScore;
 multiplier.onclick = increment;
 autoClicker.onclick = autoClickerBonus;
-
-plus1.onclick = btnClicker.click();
-plus2.onclick = btnClicker.click();
-plus3.onclick = btnClicker.click();
-plus4.onclick = btnClicker.click();
-plus5.onclick = btnClicker.click();
+createEltBtn.onclick = createBtn;
