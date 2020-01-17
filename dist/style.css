@@ -11545,6 +11545,11 @@ body {
   border-color: #90cdf4;
 }
 
+.btn-blue:enabled {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .btn-blue:disabled:active {
   background-color: #bee3f8;
   border-color: #90cdf4;
@@ -11555,6 +11560,11 @@ body {
 .btn-green {
   background-color: #48bb78;
   border-color: #2f855a;
+}
+
+.btn-green:enabled {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .btn-green2 {
