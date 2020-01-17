@@ -11434,50 +11434,60 @@ body {
   top: 35%;
   -webkit-animation: moveplus 0.8s linear infinite;
   animation: moveplus 0.8s linear infinite;
+  pointer-events: none;
 }
 
 #plus2 {
   top: 34%;
   -webkit-animation: moveplus 0.8s linear infinite;
   animation: moveplus 0.8s linear infinite;
+  pointer-events: none;
 }
 
 #plus3 {
   top: 38%;
   -webkit-animation: moveplus 0.8s linear infinite;
   animation: moveplus 0.8s linear infinite;
+  pointer-events: none;
 }
 
 #plus4 {
   top: 40%;
   -webkit-animation: moveplus 0.8s linear infinite;
   animation: moveplus 0.8s linear infinite;
+  pointer-events: none;
 }
 
 #plus5 {
   top: 32%;
   -webkit-animation: moveplus 0.8s linear infinite;
   animation: moveplus 0.8s linear infinite;
+  pointer-events: none;
 }
 
 #plus1:hover {
   cursor: pointer;
+  pointer-events: none;
 }
 
 #plus2:hover {
   cursor: pointer;
+  pointer-events: none;
 }
 
 #plus3:hover {
   cursor: pointer;
+  pointer-events: none;
 }
 
 #plus4:hover {
   cursor: pointer;
+  pointer-events: none;
 }
 
 #plus5:hover {
   cursor: pointer;
+  pointer-events: none;
 }
 
 .btn {

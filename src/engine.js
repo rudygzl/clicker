@@ -21,14 +21,12 @@ btnClicker.addEventListener("keydown", event => {
 
 function addScore() {
     score = score + count;
-    if (score > 1000) {
-        display.innerHTML = `<span>${score / 1000}k</span>`;
-    } else if (score > 10000) {
-        display.innerHTML = `<span>${Math.floor(score / 10000)}M</span>`;
-    } else if (score > 1000000) {
-        display.innerHTML = `<span>${Math.floor(score / 1000000)}M</span>`;
+    if (score > 1000 && score < 1000000) {
+        display.innerHTML = `<span>${(score / 1000).toFixed(2)}k</span>`;
+    } else if (score > 1000000 && score < 1000000000) {
+        display.innerHTML = `<span>${(score / 1000000).toFixed(2)}M</span>`;
     } else if (score > 1000000000) {
-        display.innerHTML = `<span>${Math.floor(score / 1000000000)}B</span>`;
+        display.innerHTML = `<span>${(score / 1000000000).toFixed(2)}B</span>`;
     } else {
         display.innerHTML = `<span>${score}</span>`;
     }
@@ -122,4 +120,3 @@ btnClicker.addEventListener("mousedown", function () {
 btnClicker.onclick = addScore;
 multiplier.onclick = increment;
 autoClicker.onclick = autoClickerBonus;
-createEltBtn.onclick = createBtn;

@@ -63,6 +63,7 @@ body {
     -moz-animation: moveplus 0.8s linear infinite;
     -o-animation: moveplus 0.8s linear infinite;
     animation: moveplus 0.8s linear infinite;
+    pointer-events: none;
 }
 
 #plus2 {
@@ -71,6 +72,7 @@ body {
     -moz-animation: moveplus 0.8s linear infinite;
     -o-animation: moveplus 0.8s linear infinite;
     animation: moveplus 0.8s linear infinite;
+    pointer-events: none;
 }
 
 #plus3 {
@@ -79,6 +81,7 @@ body {
     -moz-animation: moveplus 0.8s linear infinite;
     -o-animation: moveplus 0.8s linear infinite;
     animation: moveplus 0.8s linear infinite;
+    pointer-events: none;
 }
 
 #plus4 {
@@ -87,6 +90,7 @@ body {
     -moz-animation: moveplus 0.8s linear infinite;
     -o-animation: moveplus 0.8s linear infinite;
     animation: moveplus 0.8s linear infinite;
+    pointer-events: none;
 }
 
 #plus5 {
@@ -95,28 +99,34 @@ body {
     -moz-animation: moveplus 0.8s linear infinite;
     -o-animation: moveplus 0.8s linear infinite;
     animation: moveplus 0.8s linear infinite;
+    pointer-events: none;
 }
 
 #plus1:hover {
     cursor: pointer;
+    pointer-events: none;
 }
 
 #plus2:hover {
     cursor: pointer;
+    pointer-events: none;
 }
 
 #plus3:hover {
     cursor: pointer;
+    pointer-events: none;
 
 }
 
 #plus4:hover {
     cursor: pointer;
+    pointer-events: none;
 
 }
 
 #plus5:hover {
     cursor: pointer;
+    pointer-events: none;
 }
 
 .btn {
