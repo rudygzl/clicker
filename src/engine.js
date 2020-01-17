@@ -2,6 +2,8 @@ const btnClicker = document.getElementById("btnClicker");
 const display = document.getElementById("display");
 const multiplier = document.getElementById("multiplier");
 const autoClicker = document.getElementById("autoClicker");
+const autoClickerCounts = document.getElementById("autoClickerCount");
+const multiplierCounts = document.getElementById("multiplierCount");
 const plus1 = document.getElementById("plus1");
 const plus2 = document.getElementById("plus2");
 const plus3 = document.getElementById("plus3");
@@ -9,6 +11,7 @@ const plus4 = document.getElementById("plus4");
 const plus5 = document.getElementById("plus5");
 let score = 0;
 let count = 1;
+let multiplierCount = 0;
 let multiplierPrice = 50;
 let autoclickerPrice = 200;
 let autoclickerCount = 1;
@@ -47,9 +50,11 @@ function increment() {
     if (score >= multiplierPrice) {
         multiplier.innerHTML = `<span>Multiplier x ${count + 1} (Price = ${multiplierPrice})</span>`;
         count++;
+        multiplierCount++;
         score = score - multiplierPrice;
         display.innerHTML = `<span>${score}</span>`;
         multiplierPrice = multiplierPrice * 2;
+        multiplierCounts.innerHTML = `<span>${multiplierCount}</span>`;
         multiplier.innerHTML = `<span>Multiplier x ${count + 1} (Price = ${multiplierPrice})</span>`;
         multiplier.disabled = true;
         if (score < autoclickerPrice) {
@@ -67,7 +72,8 @@ function autoClickerBonus() {
         }, 1000);
         display.innerHTML = `<span>${score}</span>`;
         autoclickerPrice = autoclickerPrice * 1.5;
-        autoClicker.innerHTML = `<span>Autoclicker x ${autoclickerCount} (Price = ${Math.floor(autoclickerPrice)})</span>`;
+        autoClickerCounts.innerHTML = `<span>${autoclickerCount - 1}</span>`;
+        autoClicker.innerHTML = `<span>Autoclicker (Price = ${Math.floor(autoclickerPrice)})</span>`;
         autoClicker.disabled = true;
         if (score < multiplierPrice) {
             multiplier.disabled = true;

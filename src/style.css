@@ -135,6 +135,12 @@ body {
     line-height: 45px;
 }
 
+.btn2 {
+    @apply text-white font-bold px-4 rounded-full;
+    cursor: default;
+    pointer-events: none;
+}
+
 .btn:active {
     @apply border-b-2;
     line-height: 49px;
@@ -152,6 +158,10 @@ body {
     @apply bg-blue-500 border-blue-700;
 }
 
+.btn-blue2 {
+    @apply bg-blue-500;
+}
+
 .btn-blue:hover {
     @apply bg-blue-400 border-blue-500;
 }
@@ -167,6 +177,10 @@ body {
 
 .btn-green {
     @apply bg-green-500 border-green-700;
+}
+
+.btn-green2 {
+    @apply bg-green-500;
 }
 
 .btn-green:hover {

@@ -11501,6 +11501,16 @@ body {
   line-height: 45px;
 }
 
+.btn2 {
+  color: #fff;
+  font-weight: 700;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  cursor: default;
+  pointer-events: none;
+}
+
 .btn:active {
   border-bottom-width: 2px;
   line-height: 49px;
@@ -11519,6 +11529,10 @@ body {
 .btn-blue {
   background-color: #4299e1;
   border-color: #2b6cb0;
+}
+
+.btn-blue2 {
+  background-color: #4299e1;
 }
 
 .btn-blue:hover {
@@ -11541,6 +11555,10 @@ body {
 .btn-green {
   background-color: #48bb78;
   border-color: #2f855a;
+}
+
+.btn-green2 {
+  background-color: #48bb78;
 }
 
 .btn-green:hover {
