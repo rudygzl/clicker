@@ -10,6 +10,8 @@ const plus5 = document.getElementById("plus5");
 let score = 0;
 let count = 1;
 let multiplierPrice = 50;
+let autoclickerPrice = 200;
+let autoclickerCount = 1;
 
 btnClicker.addEventListener("keydown", event => {
     if (event.keyCode === 13) {
@@ -67,7 +69,7 @@ function addScore() {
     } else {
         display.innerHTML = `<span>${score}</span>`;
     }
-    if (score >= 200) {
+    if (score >= autoclickerPrice) {
         autoClicker.disabled = false;
     } else {
         autoClicker.disabled = true;
@@ -89,7 +91,7 @@ function increment() {
         multiplierPrice = multiplierPrice * 2;
         multiplier.innerHTML = `<span>Multiplier x ${count + 1} (Price = ${multiplierPrice})</span>`;
         multiplier.disabled = true;
-        if (score < 200) {
+        if (score < autoclickerPrice) {
             autoClicker.disabled = true;
         }
     }
@@ -104,20 +106,29 @@ function stopParticles() {
 }
 
 function autoClickerBonus() {
-    if (score >= 200) {
+    if (score >= autoclickerPrice) {
+        autoclickerCount++;
+        score = score - autoclickerPrice;
         setInterval(() => {
             btnClicker.click();
             stopParticles();
         }, 1000);
-        score = score - 200;
-        autoClicker.disabled = true;
         display.innerHTML = `<span>${score}</span>`;
-    }
-    if (score < multiplierPrice) {
-        multiplier.disabled = true;
+        autoclickerPrice = autoclickerPrice * 1.5;
+        autoClicker.innerHTML = `<span>Autoclicker x ${autoclickerCount} (Price = ${autoclickerPrice})</span>`;
+        autoClicker.disabled = true;
+        if (score < multiplierPrice) {
+            multiplier.disabled = true;
+        }
     }
 }
 
 btnClicker.onclick = addScore;
 multiplier.onclick = increment;
 autoClicker.onclick = autoClickerBonus;
+
+plus1.onclick = btnClicker.click();
+plus2.onclick = btnClicker.click();
+plus3.onclick = btnClicker.click();
+plus4.onclick = btnClicker.click();
+plus5.onclick = btnClicker.click();
