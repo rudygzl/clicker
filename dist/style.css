@@ -11489,11 +11489,6 @@ body {
   line-height: 49px;
 }
 
-.btn2:active {
-  border-bottom-width: 2px;
-  line-height: 49px;
-}
-
 .btn-red {
   background-color: #f56565;
   border-color: #c53030;

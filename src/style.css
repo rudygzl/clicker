@@ -113,11 +113,6 @@ body {
     line-height: 49px;
 }
 
-.btn2:active {
-    @apply border-b-2;
-    line-height: 49px;
-}
-
 .btn-red {
     @apply bg-red-500 border-red-700;
 }
