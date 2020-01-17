@@ -11421,36 +11421,31 @@ body {
 #plus1 {
   top: 35%;
   -webkit-animation: moveplus 0.8s linear infinite;
-  -moz-animation: moveplus 0.8s linear infinite;
-  -o-animation: moveplus 0.8s linear infinite;
+  animation: moveplus 0.8s linear infinite;
 }
 
 #plus2 {
   top: 34%;
   -webkit-animation: moveplus 0.8s linear infinite;
-  -moz-animation: moveplus 0.8s linear infinite;
-  -o-animation: moveplus 0.8s linear infinite;
+  animation: moveplus 0.8s linear infinite;
 }
 
 #plus3 {
   top: 38%;
   -webkit-animation: moveplus 0.8s linear infinite;
-  -moz-animation: moveplus 0.8s linear infinite;
-  -o-animation: moveplus 0.8s linear infinite;
+  animation: moveplus 0.8s linear infinite;
 }
 
 #plus4 {
   top: 40%;
   -webkit-animation: moveplus 0.8s linear infinite;
-  -moz-animation: moveplus 0.8s linear infinite;
-  -o-animation: moveplus 0.8s linear infinite;
+  animation: moveplus 0.8s linear infinite;
 }
 
 #plus5 {
   top: 32%;
   -webkit-animation: moveplus 0.8s linear infinite;
-  -moz-animation: moveplus 0.8s linear infinite;
-  -o-animation: moveplus 0.8s linear infinite;
+  animation: moveplus 0.8s linear infinite;
 }
 
 #plus1:hover {
