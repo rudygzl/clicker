@@ -24,11 +24,11 @@ btnClicker.addEventListener("keydown", event => {
 
 function addScore() {
     score = score + count;
-    if (score > 1000 && score < 1000000) {
+    if (score >= 1000 && score <= 1000000) {
         display.innerHTML = `<span>${(score / 1000).toFixed(2)}k</span>`;
-    } else if (score > 1000000 && score < 1000000000) {
+    } else if (score >= 1000000 && score <= 1000000000) {
         display.innerHTML = `<span>${(score / 1000000).toFixed(2)}M</span>`;
-    } else if (score > 1000000000) {
+    } else if (score >= 1000000000) {
         display.innerHTML = `<span>${(score / 1000000000).toFixed(2)}B</span>`;
     } else {
         display.innerHTML = `<span>${score}</span>`;
@@ -68,7 +68,17 @@ function autoClickerBonus() {
         autoclickerCount++;
         score = score - Math.floor(autoclickerPrice);
         setInterval(() => {
-            btnClicker.click();
+            score = score + 1;
+            display.innerHTML = `<span>${score}</span>`;
+            if (score >= 1000 && score <= 1000000) {
+                display.innerHTML = `<span>${(score / 1000).toFixed(2)}k</span>`;
+            } else if (score >= 1000000 && score <= 1000000000) {
+                display.innerHTML = `<span>${(score / 1000000).toFixed(2)}M</span>`;
+            } else if (score >= 1000000000) {
+                display.innerHTML = `<span>${(score / 1000000000).toFixed(2)}B</span>`;
+            } else {
+                display.innerHTML = `<span>${score}</span>`;
+            }
         }, 1000);
         display.innerHTML = `<span>${score}</span>`;
         autoclickerPrice = autoclickerPrice * 1.5;
